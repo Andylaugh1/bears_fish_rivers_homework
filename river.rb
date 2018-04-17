@@ -14,4 +14,11 @@ class River
   def remove_fish(name)
     @fish_held.delete(name)
   end
+
+  def fish_count(name)
+    fish_counter = @fish_held.count
+    if remove_fish(name)
+      return fish_counter -= 1
+    end
+  end
 end

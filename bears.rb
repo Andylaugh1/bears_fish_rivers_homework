@@ -15,6 +15,10 @@ class Bear
     @stomach << name
   end
 
+  # def remove_fish(name)
+  #   @river.remove_fish(name)
+  # end
+
   def remove_fish(name)
     @river.remove_fish(name)
   end
@@ -22,5 +26,13 @@ class Bear
   def roar()
     return "Rooaaaar"
   end
+
+  def food_count(name)
+    food_counter = @stomach.count
+    if add_fish(name)
+      return food_counter += 1
+    end
+  end
+
 
 end
